@@ -188,7 +188,7 @@ DEFINE_STATIC_KEY_FALSE(init_on_free);
 EXPORT_SYMBOL(init_on_free);
 
 static bool _init_on_alloc_enabled_early __read_mostly
-				= IS_ENABLED(CONFIG_INIT_ON_ALLOC_DEFAULT_ON);
+				= false;
 static int __init early_init_on_alloc(char *buf)
 {
 
@@ -197,7 +197,7 @@ static int __init early_init_on_alloc(char *buf)
 early_param("init_on_alloc", early_init_on_alloc);
 
 static bool _init_on_free_enabled_early __read_mostly
-				= IS_ENABLED(CONFIG_INIT_ON_FREE_DEFAULT_ON);
+				= false;
 static int __init early_init_on_free(char *buf)
 {
 	return kstrtobool(buf, &_init_on_free_enabled_early);
