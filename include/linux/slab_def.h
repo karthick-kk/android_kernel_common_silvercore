@@ -77,9 +77,7 @@ struct kmem_cache {
 	struct kasan_cache kasan_info;
 #endif
 
-#ifdef CONFIG_SLAB_FREELIST_RANDOM
 	unsigned int *random_seq;
-#endif
 
 	unsigned int useroffset;	/* Usercopy region offset */
 	unsigned int usersize;		/* Usercopy region size */
