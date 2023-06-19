@@ -77,6 +77,7 @@ struct vmap_area {
 	union {
 		unsigned long subtree_max_size; /* in "free" tree */
 		struct vm_struct *vm;           /* in "busy" tree */
+		struct llist_node purge_list;   /* in purge list */
 	};
 };
 
