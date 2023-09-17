@@ -62,6 +62,12 @@ EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_raise);
 EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_entry);
 EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_exit);
 
+#ifndef CONFIG_KASAN
+/* Whether KASAN is enabled at all. */
+DEFINE_STATIC_KEY_FALSE(kasan_flag_enabled);
+EXPORT_SYMBOL(kasan_flag_enabled);
+#endif
+
 /*
  * as from 2.5, kernels no longer have an init_tasks structure
  * so we need some other way of telling a new secondary core
