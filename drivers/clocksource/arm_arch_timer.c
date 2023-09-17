@@ -379,10 +379,10 @@ static u32 notrace sun50i_a64_read_cntv_tval_el0(void)
 }
 #endif
 
-#ifdef CONFIG_ARM_ARCH_TIMER_OOL_WORKAROUND
 DEFINE_PER_CPU(const struct arch_timer_erratum_workaround *, timer_unstable_counter_workaround);
 EXPORT_SYMBOL_GPL(timer_unstable_counter_workaround);
 
+#ifdef CONFIG_ARM_ARCH_TIMER_OOL_WORKAROUND
 static atomic_t timer_unstable_counter_workaround_in_use = ATOMIC_INIT(0);
 
 static void erratum_set_next_event_tval_generic(const int access, unsigned long evt,
