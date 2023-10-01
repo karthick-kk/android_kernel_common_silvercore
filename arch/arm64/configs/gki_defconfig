@@ -102,7 +102,7 @@ CONFIG_SETEND_EMULATION=y
 CONFIG_RANDOMIZE_BASE=y
 # CONFIG_RANDOMIZE_MODULE_REGION_FULL is not set
 # CONFIG_STACKPROTECTOR_PER_TASK is not set
-CONFIG_CMDLINE="stack_depot_disable=on kvm-arm.mode=off mitigations=off cgroup_disable=pressure cgroup.memory=nokmem"
+CONFIG_CMDLINE="stack_depot_disable=on kvm-arm.mode=off mitigations=off cgroup_disable=pressure cgroup.memory=nokmem rcutree.android_enable_rcu_lazy"
 CONFIG_CMDLINE_EXTEND=y
 # CONFIG_DMI is not set
 CONFIG_SUSPEND_SKIP_SYNC=y
