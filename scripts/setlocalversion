@@ -200,4 +200,9 @@ else
 	fi
 fi
 
+# specify whether thin LTO (otherwise full)
+if test "$CONFIG_LTO_CLANG_THIN" = "y"; then
+	res="${res}-thin"
+fi
+
 echo "$res"
