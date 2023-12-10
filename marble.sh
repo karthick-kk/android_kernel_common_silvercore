@@ -16,7 +16,7 @@ export PATH=$PARENT_DIR/tc/gas/linux-x86:$PATH
 export TARGET_SOC=s5e9925
 export LLVM=1 LLVM_IAS=1
 export ARCH=arm64
-KERNEL_MAKE_ENV="LOCALVERSION=-SilverCore"
+# KERNEL_MAKE_ENV="LOCALVERSION=-SilverCore"
 
 # Color
 ON_BLUE=`echo -e "\033[44m"`	# On Blue

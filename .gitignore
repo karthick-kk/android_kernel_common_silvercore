@@ -160,3 +160,6 @@ out/
 
 # Documentation toolchain
 sphinx_*/
+
+build.log
+kernel.log
