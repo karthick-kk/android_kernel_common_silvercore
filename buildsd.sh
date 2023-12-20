@@ -1,4 +1,4 @@
-export PATH=/home/kk/test/proprietary_vendor_qcom_sdclang/compiler/bin/:${PATH}
+export PATH=/home/kk/dev/android/proprietary_vendor_qcom_sdclang/compiler/bin/:${PATH}
 cp Makefile Makefile.orig
 cp Makefile.sd Makefile
 #ccache clang -print-supported-cpus
